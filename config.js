@@ -13,7 +13,7 @@ const PORTFOLIO = {
     email: "kgokul371c@gmail.com",
     github: "https://github.com/goku03l",
     linkedin: "https://www.linkedin.com/in/goku03l",
-    instagram: "https://instagram.com/goku03l",
+    instagram: "",
     twitter: "",       // Leave "" to hide
   },
 
