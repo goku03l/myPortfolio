@@ -102,12 +102,46 @@ function closeVideo() {
 
 // ── Render hero ───────────────────────────────────────────────
 function renderHero() {
-  document.getElementById('page-title').textContent     = PORTFOLIO.name + ' — Portfolio';
-  document.getElementById('nav-name').textContent       = PORTFOLIO.name;
-  document.getElementById('hero-name').textContent      = PORTFOLIO.name;
+  document.getElementById('page-title').textContent      = PORTFOLIO.name + ' — Portfolio';
+  document.getElementById('nav-name').textContent        = PORTFOLIO.name;
   document.getElementById('hero-profession').textContent = PORTFOLIO.profession;
-  document.getElementById('hero-tagline').textContent   = PORTFOLIO.tagline;
-  document.getElementById('footer-name').textContent    = '© ' + new Date().getFullYear() + ' ' + PORTFOLIO.name;
+  document.getElementById('hero-tagline').textContent    = PORTFOLIO.tagline;
+  document.getElementById('footer-name').textContent     = '© ' + new Date().getFullYear() + ' ' + PORTFOLIO.name;
+
+  // Bilingual name transition
+  const nameEl = document.getElementById('hero-name');
+  const nameA  = PORTFOLIO.name;
+  const nameB  = PORTFOLIO.nameAlt || null;
+
+  if (!nameB) {
+    nameEl.textContent = nameA;
+    return;
+  }
+
+  // Wrap in a fixed-height container so layout never shifts
+  nameEl.style.position = 'relative';
+  nameEl.innerHTML =
+    '<span class="hero-name-layer" id="hero-name-a">' + nameA + '</span>' +
+    '<span class="hero-name-layer" id="hero-name-b">' + nameB + '</span>';
+
+  const HOLD = 3000;   // ms to hold each name before fading
+  const FADE = 900;    // ms crossfade
+  let showingA = true;
+
+  // Use a wrapper so both layers occupy the same space
+  // nameB sits invisible on top; we alternate which is visible
+  function crossfade() {
+    const layerA = document.getElementById('hero-name-a');
+    const layerB = document.getElementById('hero-name-b');
+    if (!layerA || !layerB) return;
+    const fadeOut = showingA ? layerA : layerB;
+    const fadeIn  = showingA ? layerB : layerA;
+    fadeOut.style.opacity = '0';
+    fadeIn.style.opacity  = '1';
+    showingA = !showingA;
+  }
+
+  setInterval(crossfade, HOLD + FADE);
 }
 
 // ── Render about ──────────────────────────────────────────────

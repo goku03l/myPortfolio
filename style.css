@@ -862,3 +862,20 @@ footer p {
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+/* ─── BILINGUAL NAME LAYERS ──────────────────────────────────── */
+/* Both layers stacked via CSS grid so container height = tallest name */
+#hero-name {
+  display: grid !important;
+}
+.hero-name-layer {
+  grid-area: 1 / 1;           /* both occupy same cell — no layout shift */
+  transition: opacity 900ms ease;
+  white-space: nowrap;
+}
+#hero-name-a {
+  opacity: 1;
+}
+#hero-name-b {
+  opacity: 0;
+}

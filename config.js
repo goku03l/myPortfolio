@@ -1,7 +1,8 @@
 const PORTFOLIO = {
 
   // ─── PERSONAL INFO ────────────────────────────────────────────────
-  name: "Gokul Kumar",
+  name: "Gokul",
+  nameAlt: "கோகுல்",
   profession: "Aspiring Entreprenuer",
   tagline: "I craft experiences that linger.",
   bio: `Aspiring entrepreneur and builder. I have zero interest in "ticking boxes"—I’m here to take full-stack ownership of ideas and turn them into industrial reality. I believe every project should be as bold as it is beautiful. This is a living archive of my work before it becomes an industry.\n\nDocumenting my work`,
@@ -18,8 +19,8 @@ const PORTFOLIO = {
 
   // ─── SKILLS ───────────────────────────────────────────────────────
   skills: [
-    { category: "Design",      items: ["Brand Identity", "UI/UX", "Motion Design", "Typography", "Art Direction"] },
-    { category: "Tech",        items: ["AI/ML","GenAI","PLM"] },
+    { category: "Engineering",      items: ["Embedded Systems", "Automobile Engineering", "Vehice Dynamics"] },
+    { category: "Tech",        items: ["AI/ML","GenAI","PLM","DS"] },
     
   ],
 
@@ -42,8 +43,13 @@ const PORTFOLIO = {
       link: "https://intellicad-ap6znq2zrc7bw7zzxddkru.streamlit.app/",
     },
     {
-      title: "DrawingDIFF",
-      description: "A 12-minute film tracing the journey of a family recipe across four generations. Shot on 16mm, edited in a week.",
+      title: "DrawingDIFF: See the Shift. Skip the Squint.",
+      description: "DrawingDIFF: See the Shift. Skip the Squint.\n\n" +
+"Stop playing \"Spot the Difference\" with complex blueprints. DrawingDIFF instantly overlays your engineering revisions, highlighting every moved line and modified dimension in high-contrast detail.\n\n" +
+"Pixel-Perfect Comparison: Instantly catch what the human eye misses.\n" +
+"Auto-Generated Audit Trails: Every change is automatically tabularized into a clean, exportable report.\n" +
+"Engineering Grade Precision: Built for the high-stakes world where a millimeter matters.\n\n" +
+"Upload. Compare. Build with confidence.",
       tags: ["GenAI", "Industry Problem"],
       featured: true,
       youtube: "dQw4w9WgXcQ",   // You can also paste just the video ID
@@ -56,18 +62,10 @@ const PORTFOLIO = {
       tags: [ "Experimental"],
       featured: false,
       youtube: "",
-      image: "",
+      image: "utils/sm.png",
       link: "https://example.com",
     },
-    {
-      title: "Campaign — Nomad Collective",
-      description: "Social campaign for a travel brand targeting Gen Z adventurers. 3.2M organic impressions in 6 weeks.",
-      tags: ["Campaign", "Social"],
-      featured: false,
-      youtube: "",
-      image: "",
-      link: "",
-    },
+
   ],
 
   // ─── YOUTUBE VIDEOS (dedicated section) ───────────────────────────
@@ -76,19 +74,19 @@ const PORTFOLIO = {
 
   videos: [
     {
-      title: "Behind the Solstice Brand",
-      description: "A 5-minute process video walking through the full brand development from first sketch to final delivery.",
-      youtube: "dQw4w9WgXcQ",
+      title: "Rick Roll 1",
+      description: "You are being RickRoled",
+      youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     },
     {
-      title: "My Creative Process",
-      description: "How I go from a blank page to a finished concept — tools, rituals, and rabbit holes included.",
-      youtube: "dQw4w9WgXcQ",
+      title: "Rick Roll 2",
+      description: "You are being RickRoled",
+      youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     },
     {
-      title: "Filmmaking on a Budget",
-      description: "Everything I wish I knew before shooting Heirloom. Gear, mistakes, and what actually matters.",
-      youtube: "dQw4w9WgXcQ",
+      title: "Rick Roll 3",
+      description: "You are being RickRoled",
+      youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     },
   ],
 
@@ -98,25 +96,25 @@ const PORTFOLIO = {
 
   blogs: [
     {
-      title: "Why I Still Shoot on Film in 2025",
-      excerpt: "Digital is efficient. Film is honest. Here's what three years of analog photography taught me about slowing down and seeing clearly.",
-      date: "April 2025",
-      link: "https://example.com/blog/film",
-      tags: ["Photography", "Reflection"],
+      title: "Danke SEB!",
+      excerpt: "Engineanalysing SEBs carrear",
+      date: "July 30, 2022",
+      link: "https://explaining-engineering-f1.blogspot.com/2022/07/danke-seb.html",
+      tags: ["Formula 1"],
     },
     {
-      title: "The Rebrand That Almost Broke Me",
-      excerpt: "A brutally honest account of taking on a project three sizes too big — what I learned, what I'd do differently, and why I'd do it again.",
-      date: "February 2025",
-      link: "https://example.com/blog/rebrand",
-      tags: ["Branding", "Lessons"],
+      title: "Aerodynamics are for winner",
+      excerpt: "Victory isn't just about horsepower; it’s about how you carve through the air. In this post, we break down the invisible forces that separate the podium finishers from the rest of the pack. From active aero to the ground effect, learn why mastering the wind is the ultimate unfair advantage in modern motorsport",
+      date: "September 6, 2020",
+      link: "https://explaining-engineering-f1.blogspot.com/2020/09/aerodynamics-are-for-winners.html",
+      tags: ["Formula 1", "Explaining Engineering"],
     },
     {
-      title: "Designing for Feeling, Not Function",
-      excerpt: "Most design education teaches you to solve problems. Nobody teaches you to make someone feel something. Here's how I think about emotion-first design.",
-      date: "December 2024",
-      link: "https://example.com/blog/emotion",
-      tags: ["Design", "Philosophy"],
+      title: "Tire Dynamics - The Dark Art",
+      excerpt: "Forget everything you know about friction. In the realm of high-performance driving, the contact patch is a chaotic battlefield of heat, chemical bonding, and mechanical interlocking. This post pulls back the curtain on 'The Dark Art' exploring how slip angles, load sensitivity, and hysteresis determine whether a car sticks to the apex or slides into the barriers. Master the rubber, master the race",
+      date: "August 23, 2020",
+      link: "https://explaining-engineering-f1.blogspot.com/2020/08/tyre-dynamics-dark-art.html",
+      tags: ["Automobile", "Explaining Engineering"],
     },
   ],
 
