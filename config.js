@@ -10,7 +10,7 @@ const PORTFOLIO = {
 
   // ─── SOCIAL & CONTACT ─────────────────────────────────────────────
   contact: {
-    email: "kgokul371c@gmail.com",
+    email: "gokul@thunivin.com",
     github: "https://github.com/goku03l",
     linkedin: "https://www.linkedin.com/in/goku03l",
     instagram: "",
